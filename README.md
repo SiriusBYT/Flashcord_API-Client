@@ -8,6 +8,6 @@ The Flashstore API lets you retrieve information about posted Flashcord Modules,
 **GET/MODULES** | *['siriusbyt', '["infnite_chat_effects","extended_chat_effects"]']* | Get every single Flashcord Module posted on the Flashcord Store |
 **GET/PLUGINS** | *['siriusbyt', '["themehooker"]', 'tharki-god', '["discordbypasses","fakedeafen","atsomeone","alwaystyping"]', 'eastarctica', '["nomoreforg"]']* | Get every single Plugins posted on the Flashcord Store. |
 **GET/USERS** | *['siriusbyt', 'tharki-god', 'eastarctica']* | Get every single Users who posted on the Flashcord Store something. |
-**GET/PLUGINS/THARKI-GOD** | *["discordbypasses","fakedeafen","atsomeone","alwaystyping"]', 'eastarctica', '["nomoreforg"]']* | Get every single Plugins posted on the Flashcord Store. |
+**GET/PLUGINS/THARKI-GOD** | *["discordbypasses","fakedeafen","atsomeone","alwaystyping"]', 'eastarctica', '["nomoreforg"]']* | Get every single Plugins posted on the Flashcord Store from an user (here: THARKI-GOD). |
 
 #### ℹ️ The server source code will **not** be released.
