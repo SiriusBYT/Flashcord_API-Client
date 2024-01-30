@@ -25,7 +25,7 @@ def FlashClient_API_Request(API_Request):
         RemoteServer.send(str.encode('READY'))
 
     # Server Information
-    OfflineDebug = False
+    OfflineDebug = True
     if OfflineDebug == True:
         ServerAddress = socket.gethostname()
     else:
@@ -116,4 +116,4 @@ def FlashClient_API_Request(API_Request):
         LogString = f'ERROR: Unknown server response received! They sent us "{RemoteServer_Response}!'
         WriteToLog(LogString,False)
 
-#FlashClient_API_Request("GET/PLUGINS/THARKI-GOD")
+FlashClient_API_Request("GET/PLUGINS/THARKI-GOD")

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB" class="SNDL-Dark">
+    <head>
+        <title>JS Test</title>
+        <!-- SNWE External-->
+        <link rel="stylesheet" href="https://sirio-network.com/bin/SNDL-App_Base.css">
+        <script src="Flashstore_API-Client.js"></script> 
+        <link rel="icon" type="image/x-icon" href="https://sirio-network.com/sbin/SGN-SNDL_FULL.png">
+        <!-- SNWE Misc-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    </head>
+
+    <body onload="EnterHook()">
+        <div class="FakeRoot SNDL-Quick_FlexGrid" style="scale: 1;">
+            <div>
+                <h1>Flashstore API JavaScript Client</h1>
+                <div class="SNDL-Quote SNDL-BC_Warning">
+                    <div>
+                        <h2>NOTICE:</h2>
+                        <p>The JavaScript client does <b>NOT</b> connect to the real Python backend server.</p>
+                        <p>It first connects to a translation server that translate JavaScript's websocket messages to the raw TCP that the backend uses.</p>
+                    </div>
+                </div>
+                <div class="SNDL-Quick_FlexGrid" style="min-width: 50vw;">
+                    <input class="SNDL-SearchInput" id="API_Input" type="text" placeholder="Insert API Request" style="width: calc(100% - 50%);">
+                    <button class="SNDL-BC_Warning">
+                        <a href="#" onclick="FlashstoreAPI_Requester()">
+                            <p>Initiate Request</p>
+                        </a>
+                    </button>
+                </div>
+                <div>
+                    <h3 id="API_Result" style="text-align: center;">Result:</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
