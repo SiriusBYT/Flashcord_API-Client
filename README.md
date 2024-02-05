@@ -11,6 +11,7 @@ GET/SPLASH_TEXT | Get a funny (or cringe) text
 GET/API_VERSION | Get the server's running API Version
 GET/SERVER_VERSION | Get the Server's running version
 GET/[VIEWS/INSTALLS]/[internal_name] | Get the amount of views/installs for [internal_name], works with Replugged IDs
-ADD_STAT/[VIEWS/INSTALLS]/[internal_name] | Add a views/installs for [internal_name], works with Replugged IDs. Can only done once.
+ADD_STAT/[VIEWS/INSTALLS]/[internal_name] | Add a views/installs for [internal_name], works with Replugged IDs. Can only done once
+
 
 #### ℹ️ The server source code will **not** be released.
