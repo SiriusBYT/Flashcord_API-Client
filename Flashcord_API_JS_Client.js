@@ -3,7 +3,7 @@
 
 function Flashcord_API_Client(API_Request) {
     return new Promise(function(Success) {
-        let ServerAddress = new WebSocket("wss://aura-two.sirio-network.com:1408");
+        let ServerAddress = new WebSocket("wss://api.sirio-network.com");
         // let ServerAddress = new WebSocket("ws://localhost:1407");
         ServerAddress.onopen = function(e) {
             console.log("Sending API Version Number")
