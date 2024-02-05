@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB" class="SNDL-Dark">
+    <head>
+        <title>JS Test</title>
+        <!-- SNWE External-->
+        <link rel="stylesheet" href="https://sirio-network.com/bin/SNDL-App_Base.css">
+        <script src="Flashcord_API_JS_Client.js"></script> 
+        <link rel="icon" type="image/x-icon" href="https://sirio-network.com/sbin/SGN-SNDL_FULL.png">
+        <!-- SNWE Misc-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    </head>
+
+    <body onload="EnterHook()">
+        <div class="FakeRoot SNDL-Quick_FlexGrid" style="scale: 1;">
+            <div>
+                <h1>Flashcord API JavaScript Client</h1>
+                <div class="SNDL-Quote SNDL-BC_Warning">
+                    <div>
+                        <h2>NOTICE:</h2>
+                        <p>The JavaScript Client isn't really meant to be used outside of the Flashcord Store to request certain things.</p>
+                        <p>Please use the Python Client with sockets (WebSockets not recommended, but it can work) if you want to automate things.</p>
+                        <p>Remind yourself also that the JavaScript Client is way. WAY. Dumber than its Python variant due to my inexperience with JavaScript.</p>
+                        <p>Furthermore this client is not supposed to be used for anything other than "ADD_STAT" API Requests (hence why it's so dumb).</p>
+                    </div>
+                </div>
+                <div class="SNDL-Quick_FlexGrid" style="min-width: 50vw;">
+                    <input class="SNDL-SearchInput" id="API_Input" type="text" placeholder="Insert API Request" style="width: calc(100% - 50%);">
+                    <button class="SNDL-BC_Warning">
+                        <a href="#" onclick="FlashstoreAPI_Requester()">
+                            <p>Initiate Request</p>
+                        </a>
+                    </button>
+                </div>
+                <div>
+                    <h3 id="API_Result" style="text-align: center;">Result:</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

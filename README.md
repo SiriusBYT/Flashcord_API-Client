@@ -1,13 +1,17 @@
 # Documentation isn't finished yet.
 The Flashstore API lets you retrieve information about posted Flashcord Modules, Replugged Plugins and etc. It is currently a read-only API which will be used only for internal infrastructure or making more advanced versions of FlashCFG (The Flashcord Store Template's quick store & embed configurator).
 
-### API Commands & Examples (API Version 2.02)
-| Arguments | Server Response Example | Explanation |
-|:---|:---:|----:|
-**GET** | *MISSING_ARGUMENT* | What are you trying to GET? Give me some more indications! |
-**GET/MODULES** | *['siriusbyt', '["infnite_chat_effects","extended_chat_effects"]']* | Get every single Flashcord Module posted on the Flashcord Store |
-**GET/PLUGINS** | *['siriusbyt', '["themehooker"]', 'tharki-god', '["discordbypasses","fakedeafen","atsomeone","alwaystyping"]', 'eastarctica', '["nomoreforg"]']* | Get every single Plugins posted on the Flashcord Store. |
-**GET/USERS** | *['siriusbyt', 'tharki-god', 'eastarctica']* | Get every single Users who posted on the Flashcord Store something. |
-**GET/PLUGINS/THARKI-GOD** | *["discordbypasses","fakedeafen","atsomeone","alwaystyping"]', 'eastarctica', '["nomoreforg"]']* | Get every single Plugins posted on the Flashcord Store from an user (here: THARKI-GOD). |
+### API Commands (v3.0)
+| API Commands | Explanation |
+|:---|:---|
+GET | Retrieve all main server data (Currently does NOT pull view/install/splash text data)
+GET/[MODULES/PLUGINS/THEMES] | Retrieve all the internal names of the specified Flashcord Addon type
+GET/USERS | Retrieve all users who published an addon to the Flashcord Store
+GET/SPLASH_TEXT | Get a funny (or cringe) text
+GET/API_VERSION | Get the server's running API Version
+GET/SERVER_VERSION | Get the Server's running version
+GET/[VIEWS/INSTALLS]/[internal_name] | Get the amount of views/installs for [internal_name], works with Replugged IDs
+ADD_STAT/[VIEWS/INSTALLS]/[internal_name] | Add a views/installs for [internal_name], works with Replugged IDs. Can only done once
+
 
 #### ℹ️ The server source code will **not** be released.
