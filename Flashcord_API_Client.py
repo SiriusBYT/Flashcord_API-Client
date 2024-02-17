@@ -5,7 +5,7 @@ import math
 def Flashcord_API_Client(API_Request):
     Request_Start = time.time()
     Debug_Mode = True
-    Debug_Offline = True
+    Debug_Offline = False
     Allow_LogFile = False
 
     # Server & Client Information
@@ -38,7 +38,7 @@ def Flashcord_API_Client(API_Request):
         LogFile = f"{Data}.log"
         PrintLog = f"[{Time}] {Log}"
         FileLog = f'{PrintLog}\n'
-        if Allow_LogFile = True:
+        if Allow_LogFile == True:
             with open(LogFile, "a", encoding="utf=8") as LogFile: LogFile.write(FileLog)
         if isDebugMessage == True and Debug_Mode == True: print(PrintLog)
         elif isDebugMessage == False: print(PrintLog)
