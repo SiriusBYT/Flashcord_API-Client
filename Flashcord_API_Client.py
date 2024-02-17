@@ -5,7 +5,8 @@ import math
 def Flashcord_API_Client(API_Request):
     Request_Start = time.time()
     Debug_Mode = True
-    Debug_Offline = True
+    Debug_Offline = False
+    Allow_LogFile = False
 
     # Server & Client Information
     if Debug_Offline == True:
@@ -13,10 +14,10 @@ def Flashcord_API_Client(API_Request):
     else:
         Server_Address = "raw_api.sirio-network.com"
     Server_Port = 1407
-    Packet_Size = 1024
+    Packet_Size = 8192
     Server = socket.socket()
-    Client_Version = "r240201"
-    Client_API_Version = "3.0"
+    Client_Version = "r240217"
+    Client_API_Version = "3.1"
 
     ASCII_Banner = "\n░█▀▀░█░░░█▀█░█▀▀░█░█░█▀▀░█▀█░█▀▄░█▀▄░░░█▀█░█▀█░▀█▀░░░█▀▀░█░░░▀█▀░█▀▀░█▀█░▀█▀\n\
 ░█▀▀░█░░░█▀█░▀▀█░█▀█░█░░░█░█░█▀▄░█░█░░░█▀█░█▀▀░░█░░░░█░░░█░░░░█░░█▀▀░█░█░░█░\n\
@@ -37,10 +38,10 @@ def Flashcord_API_Client(API_Request):
         LogFile = f"{Data}.log"
         PrintLog = f"[{Time}] {Log}"
         FileLog = f'{PrintLog}\n'
-        with open(LogFile, "a", encoding="utf=8") as LogFile:
-            LogFile.write(FileLog)
-            if isDebugMessage == True and Debug_Mode == True: print(PrintLog)
-            elif isDebugMessage == False: print(PrintLog)
+        if Allow_LogFile == True:
+            with open(LogFile, "a", encoding="utf=8") as LogFile: LogFile.write(FileLog)
+        if isDebugMessage == True and Debug_Mode == True: print(PrintLog)
+        elif isDebugMessage == False: print(PrintLog)
     # Key Handling Functions
     def Send(Packet):
         try: Server.send(str(Packet).encode())
@@ -82,21 +83,3 @@ def Flashcord_API_Client(API_Request):
             case "": WriteLog(f"[ERROR] The server sent us an empty response!",False); return "EMPTY_RESPONSE"
             case _: WriteLog(f'[SUCCESS] Received {Server_Data} for our request!',False); return Server_Data
     except Exception as Error_Info: WriteLog(f'[ERROR] Failed to send our API request! \n[ERROR TRACEBACK]\n{Error_Info}", False)',False); return "TIMEOUT"
-    
-
-
-#Flashcord_API_Client("GET/SPLASH_TEXT")
-Flashcord_API_Client("ADD_STAT/VIEWS/infinite_chat_effects")
-Flashcord_API_Client("GET/VIEWS/infinite_chat_effects")
-#Flashcord_API_Client("GET")
-#Flashcord_API_Client("GET/MODULES")
-#Flashcord_API_Client("GET/MODULES/SIRIUSBYT")
-#Flashcord_API_Client("GET/MODULES/SiriusBYT")
-#Flashcord_API_Client("GET/PLUGINS")
-#Flashcord_API_Client("GET/THEMES")
-#Flashcord_API_Client("GET/USERS")
-#Flashcord_API_Client("GET/SERVER_VERSION")
-#Flashcord_API_Client("GET/API_VERSION")
-#Flashcord_API_Client("GET/ERROR")
-#Flashcord_API_Client("GETERROR")
-#Flashcord_API_Client("GET/MODULES/NOTFOUND")
