@@ -7,7 +7,7 @@ function Flashcord_API_Client(API_Request) {
         // let ServerAddress = new WebSocket("ws://localhost:1407");
         ServerAddress.onopen = function(e) {
             console.log("Sending API Version Number")
-            ServerAddress.send("3.0");
+            ServerAddress.send("3.1");
         };
 
         ServerAddress.onmessage = function(event) {
