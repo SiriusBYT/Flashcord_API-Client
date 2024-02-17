@@ -12,7 +12,7 @@ def Flashcord_API_Client(API_Request):
     if Debug_Offline == True:
         Server_Address = socket.gethostname()
     else:
-        Server_Address = "aura-two.sirio-network.com"
+        Server_Address = "raw_api.sirio-network.com"
     Server_Port = 1407
     Packet_Size = 8192
     Server = socket.socket()
@@ -83,7 +83,3 @@ def Flashcord_API_Client(API_Request):
             case "": WriteLog(f"[ERROR] The server sent us an empty response!",False); return "EMPTY_RESPONSE"
             case _: WriteLog(f'[SUCCESS] Received {Server_Data} for our request!',False); return Server_Data
     except Exception as Error_Info: WriteLog(f'[ERROR] Failed to send our API request! \n[ERROR TRACEBACK]\n{Error_Info}", False)',False); return "TIMEOUT"
-    
-
-
-Flashcord_API_Client("GET/VIEWS")
