@@ -14,4 +14,8 @@ GET/[VIEWS/INSTALLS]/[internal_name] | Get the amount of views/installs for [int
 ADD_STAT/[VIEWS/INSTALLS]/[internal_name] | Add a views/installs for [internal_name], works with Replugged IDs. Can only done once
 
 
+## This code will soon be deprecated
+The Flashcord API is going to be replaced by the Sirio Network API.
+
 #### ℹ️ The server source code will **not** be released.
+except now it is lol go laugh https://github.com/SiriusBYT/Flashcord_API-Server
