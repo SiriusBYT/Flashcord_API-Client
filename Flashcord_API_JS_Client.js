@@ -6,18 +6,14 @@ function Flashcord_API_Client(API_Request) {
         let ServerAddress = new WebSocket("wss://api.sirio-network.com");
         // let ServerAddress = new WebSocket("ws://localhost:1407");
         ServerAddress.onopen = function(e) {
-            console.log("Sending API Version Number")
-            ServerAddress.send("3.1");
+            console.log("Sending API Request...")
+            ServerAddress.send(API_Request);
         };
 
         ServerAddress.onmessage = function(event) {
-            if (event.data == "OK" || event.data == "OUTDATED_SERVER") {
-                ServerAddress.send(API_Request);
-            } else {
-                ServerAddress.close();
-                Success(event.data);
-            }
+            Success(event.data);
         }
+        
         ServerAddress.onclose = function(event) {
             if (event.wasClean) {
                 console.log("Connection closed. Code=${event.code} Reason=${event.reason}");
